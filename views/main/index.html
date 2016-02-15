@@ -1,0 +1,47 @@
+<div class="container" ng-controller="MainCtrl">
+        
+    <h1>Users</h1>
+
+    <label>Enter name</label>
+    <input ng-model="user.name" type="text" class="form-control">
+    <label>Enter surname</label>
+    <input ng-model="user.surname" type="text" class="form-control">
+    <br/>
+    <div class="btn btn-block btn-primary" ng-click="addUser()">Add user</div>
+
+    <div class="btn btn-danger" ng-click="removeSelected()">Remove selected</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Surname
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in users">
+                <td>
+                    <input ng-model="user.selected" type="checkbox" >
+                </td>
+                <td>
+                    {{user.name}}
+                </td>
+                <td>
+                    {{user.surname}}
+                </td>
+                <td>
+                    <div ng-click="removeUser($index, user)" class="btn btn-xs btn-danger">Remove</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
