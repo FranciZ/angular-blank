@@ -3,17 +3,18 @@
     <head>
         
         <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="libs/jquery-2.2.0.js"></script>
         <script src="libs/bootstrap/js/bootstrap.min.js"></script>
         <script src="libs/angular.min.js"></script>
         <script src="libs/angular-ui-router.min.js"></script>
         
     </head>
-    <body>
- 
-        <div class="btn btn-primary" ui-sref="dashboard">Dashboard</div>
-        <div class="btn btn-primary" ui-sref="projects">Projects</div>
-        <div class="btn btn-primary" ui-sref="articles">Articles</div>
-        <div ui-view></div>
+    <body ng-controller="MainCtrl">
+    
+        <side-nav buttons="navButtons"></side-nav>
+        <!-- ui-view attribute determines which element should nest all the state or route templates -->
+        <div ui-view class="content-view"></div>
         
     </body>
     
@@ -22,6 +23,8 @@
     <script src="views/articles/ctrl.js"></script>
     <script src="views/dashboard/ctrl.js"></script>
     <script src="views/projects/ctrl.js"></script>
+    <script src="directives/side-nav.js"></script>
+    <script src="services/projects.js"></script>
     
 </html>
 

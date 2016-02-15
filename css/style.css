@@ -1,0 +1,29 @@
+.nav-container{
+    
+    position: absolute;
+    width:200px;
+    background-color: #333;
+    
+}
+
+.content-view{
+    
+    margin-left: 200px;
+    padding:10px;
+    
+}
+
+.nav-button{
+    
+    padding:0px 20px;
+    line-height: 50px;
+    background-color: #eee;
+    border-bottom:1px solid #fff;
+    
+}
+
+.active{
+    
+    background-color: #ccc;
+    
+}

@@ -2,3 +2,18 @@
 
 <h3>Article title</h3>
 <p>Lorem ipsume</p>
+
+<table class="table">
+    <thead>
+        <th>
+            Name
+        </th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="project in projects">
+            <td>
+                {{project.name}}
+            </td>
+        </tr>
+    </tbody>
+</table>
